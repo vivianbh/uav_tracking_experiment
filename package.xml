@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>uav_tracking_experiment</name>
+  <name>tracking_experiment</name>
   <version>0.0.0</version>
   <description>The tracking_experiment package</description>
 

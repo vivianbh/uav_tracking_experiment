@@ -78,7 +78,7 @@ vector<float> alignLocalFrame(vector<float> point, float theta)
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "flight_waypoints");
+    ros::init(argc, argv, "flightControl_waypoints");
     ros::NodeHandle nh;
     ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
             ("mavros/state", 10, state_cb);

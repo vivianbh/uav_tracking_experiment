@@ -11,6 +11,9 @@ sudo apt install python3-pip
 pip3 install pyserial pynput rospkg
 ```
 
+Make sure ROS can find following ros messages `BoundingBox.msg`, `BoundingBoxs.msg`, `ObjectCount.msg`.
+If not, they can be fined in `darknet_ros` official github.
+
 Downlaod the package and build the dependencies
 ```bash
 git clone git@github.com:vivianbh/tracking_experiment_outdoor.git
@@ -28,8 +31,9 @@ sudo chmod 777 /dev/ttyMav /dev/ttyUAV /dev/ttySiyi
 ## Usage
 
 ### Custom communication protocol
-1. Gimbal Camera: 同中科院計畫中的尋標器硬體迴路模擬
+1. Gimbal Camera: 同計畫中的尋標器硬體迴路模擬
 2. Telemtry: define in `tracking_experiment_outdoor/doc/`
+(視需求增刪)
 
 ### Telemetry (GCS <-> UAV)
 On UAV
@@ -103,10 +107,10 @@ Start offboard node
 ```bash
 $ roslaunch tracking_experiment navigation.launch
 ```
-  - select the firmware which FUC use
-  ```launch
-  <!-- system of fcu: apm or px4 -->
-<arg name="fcu_sys" default="px4" />
+  - select the firmware which FUC used in `params_waypoints.yaml`
+  ```yaml
+  # system of fcu: apm or px4
+  fcu_sys: "px4"
   ```
   - Default State: wait for GCS command to enter offboard mode and do waypoints tracking
   - functions trigger by rostopic `/exp/telem/gcs_cmd`

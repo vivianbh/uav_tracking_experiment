@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(uav_tracking_experiment)
+project(tracking_experiment)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -163,9 +163,9 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_executable(flight_waypoints src/flightControl_waypoints.cpp)
-add_dependencies(flight_waypoints ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(flight_waypoints
+add_executable(flightControl_waypoints src/flightControl_waypoints.cpp)
+add_dependencies(flightControl_waypoints ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(flightControl_waypoints
  ${mavros_LIBRARIES}
  ${catkin_LIBRARIES}
 )
