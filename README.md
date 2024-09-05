@@ -1,20 +1,19 @@
 ## Environment Setup
 
-Install mavros
+1. Install mavros
 ```bash
 sudo apt-get install ros-${ROS_DISTRO}-mavros ros-${ROS_DISTRO}-mavros-extras ros-${ROS_DISTRO}-mavros-msgs
 ```
 
-Install python3 library
+2. Install python3 library
 ```bash
 sudo apt install python3-pip
 pip3 install pyserial pynput rospkg
 ```
 
-Make sure ROS can find following ros messages `BoundingBox.msg`, `BoundingBoxs.msg`, `ObjectCount.msg`.
-If not, they can be fined in `darknet_ros` official github.
+3. Make sure ROS can find following ros messages `BoundingBox.msg`, `BoundingBoxs.msg`, `ObjectCount.msg`. If not, they can be found in [**darknet_ros**](https://github.com/leggedrobotics/darknet_ros) official github.
 
-Downlaod the package and build the dependencies
+4. Downlaod the package and build the dependencies
 ```bash
 git clone git@github.com:vivianbh/tracking_experiment_outdoor.git
 cd ..
@@ -33,7 +32,7 @@ sudo chmod 777 /dev/ttyMav /dev/ttyUAV /dev/ttySiyi
 ### Custom communication protocol
 1. Gimbal Camera: 同計畫中的尋標器硬體迴路模擬
 2. Telemtry: define in `tracking_experiment_outdoor/doc/`
-(視需求增刪)
+   (可視需求增刪)
 
 ### Telemetry (GCS <-> UAV)
 On UAV
@@ -102,6 +101,7 @@ $ vim params_waypoints.yaml
     - range: 0-359
     - units: degree
   - 1 distance threshold for triggering next waypoint
+  - 1 firmware option to select
 
 Start offboard node
 ```bash
