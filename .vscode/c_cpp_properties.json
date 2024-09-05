@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ncrl/ncrl/tracking_ws/devel/include/**",
+        "/home/ncrl/ncrl/px4_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/darknet_ros/darknet_ros/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/fw_control/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/gazebo_ros_pkgs/gazebo_plugins/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/gazebo_ros_pkgs/gazebo_ros/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/gazebo_ros_pkgs/gazebo_ros_control/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/ibvs_ukf/include/**",
+        "/home/ncrl/ncrl/px4_ws/src/inf_eo/include/**",
+        "/home/ncrl/ncrl/tracking_ws/src/uav_tracking_experiment/include/**",
+        "/home/ncrl/ncrl/tracking_ws/src/tracking_uav_control/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

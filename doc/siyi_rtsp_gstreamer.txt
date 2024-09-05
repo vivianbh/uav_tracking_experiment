@@ -1,0 +1,1 @@
+sudo gst-launch-1.0 rtspsrc location=rtsp://192.168.144.25:8554/main.264 latency=10 ! queue ! rtph264depay ! h264parse ! avdec_h264 ! videoconvert ! videoscale ! video/x-raw,width=1080,height=720 ! ximagesink

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+	<group ns="uav0">
+		<arg name="fcu_url" default="/dev/ttyMav:230400" />
+		<arg name="tgt_system" default="6" />
+
+		<include file="$(find mavros)/launch/apm.launch" >
+			<arg name="fcu_url" value="$(arg fcu_url)" />
+			<arg name="tgt_system" value="$(arg tgt_system)" />
+		</include>
+	</group>
+
+</launch>
+

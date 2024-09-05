@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="rosbag" 
+		type="record" 
+		name="record_ros"
+		output="screen"
+		args="-o $(find tracking_experiment)/rosbag/exp --split --duration=15m
+			/uav0/mavros/state /uav0/mavros/vfr_hud
+			/uav0/mavros/altitude /uav0/mavros/geofence/waypoints 
+			/uav0/mavros/global_position/global /uav0/mavros/global_position/local 
+			/uav0/mavros/global_position/rel_alt /uav0/mavros/local_position/odom 
+			/uav0/mavros/mission/waypoints /exp/telem/gcs_cmd /exp/offboard/waypoints
+			/uav0/mavros/setpoint_raw/target_local /uav0/mavros/mission/reached
+			/exp/camera/raw" />
+</launch>
+

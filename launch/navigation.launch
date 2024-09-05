@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch> 
+	<group ns="uav0">
+		<rosparam file="$(find tracking_experiment)/config/params_waypoints.yaml"/>
+		<node pkg="tracking_experiment" name="flight_waypoints" type="flight_waypoints" output="screen" />
+	</group>
+
+</launch>
+

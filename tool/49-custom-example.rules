@@ -1,0 +1,11 @@
+# Prolific Technology Inc. symbolic link of the driver to a customized one
+# SIYI TTL2USB Module
+KERNEL=="ttyUSB[0-9]*", SUBSYSTEM=="tty", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", SYMLINK="ttySiyi"
+
+# Silicon Labs symbolic link of the driver to a customized one
+# MavLink
+KERNEL=="ttyUSB[0-9]*", SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", SYMLINK="ttyMav"
+
+# FTDI symbolic link of the driver to a customized one
+# Telem UAV
+KERNEL=="ttyUSB[0-9]*", SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK="ttyUAV"

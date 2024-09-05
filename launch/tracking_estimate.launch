@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+	<include file="$(find tracking_experiment)/launch/tracking_gimbal_uav0.launch"/>
+
+	<include file="$(find tracking_experiment)/launch/ukf_estimation.launch" />
+	
+	<node pkg="tracking_experiment" name="target_qp" type="target_qp.py" output="screen" />
+
+</launch>
+

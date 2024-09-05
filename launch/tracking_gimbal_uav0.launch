@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+	<group ns="uav0">
+		<node pkg="tracking_experiment" name="ibvs_gimbal" type="ibvs_gimbal" output="screen" />
+		<rosparam file="$(find tracking_experiment)/config/params_ibvs.yaml"/>
+	</group>
+	
+</launch>
+
